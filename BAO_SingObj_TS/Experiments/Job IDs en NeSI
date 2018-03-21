@@ -1,0 +1,23 @@
+
+
+
+59053918 BAO SingObj LS con movimiento 'all-neighbours' para el set de instancias equidistantes (14 initials BACs en total)
+59182426 BAO SingObj LS con movimiento 'next-Descent' para el set de instancias equidistantes (14 initials BACs en total)
+
+59053954, 59053955, 59053956, 59053957, 59053958. BAO Tabu Search con el set de instancias equidistantes (14 initials BACs en total) **FALLO**
+59182466, 59184417, 59184418 BAO Tabu Search con el set de instancias equidistantes (1-5 de 14 initials BACs en total)
+59182643, 59182644, 59182645 BAO Tabu Search con el set de instancias equidistantes (6-10 de 14 initials BACs en total)
+59183902, 59183903, 59183904 BAO Tabu Search con el set de instancias equidistantes (11-14 de 14 initials BACs en total)
+
+59702496 Tabu Search con Performance List con el set de instancias equidistantes (1-5 de 14 initials BACs en total)
+
+
+59725791-92-93-94-95 Tabu Search para initial BAC 0-70-140-210-280
+59727115-16-17-18-19 Tabu Search w/ Performance List para initial BAC 0-70-140-210-280 
+
+
+59770867 Tabu Search con TabuList Arreglo y sin PerformanceList para intialBAC 0-70-140-210-280 (x5 veces con el mismo initial BAC)
+59770868 Tabu Search con TabuList Matriz y sin PerformanceList para intialBAC 0-70-140-210-280 (x5 veces con el mismo initial BAC)
+59770872 Tabu Search con TabuList Arreglo y con PerformanceList para intialBAC 0-70-140-210-280 (x5 veces con el mismo initial BAC)
+59770873 Tabu Search con TabuList Matriz y con PerformanceList para intialBAC 0-70-140-210-280 (x5 veces con el mismo initial BAC)
+59770876 Tabu Search sin TabuList y con PerformanceList para intialBAC 0-70-140-210-280 (x5 veces con el mismo initial BAC)

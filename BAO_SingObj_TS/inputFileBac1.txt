@@ -1,0 +1,154 @@
+%This File contains the input parameters for the BAO_SingObj_TS algorithm
+%Comments MUST start with '%\t' otherwise the line will be read by the program as an input parameter
+%Empty lines are NOT allowed. Parameters must be separated by a '\t' character
+%
+%
+%Firstly the number of Organs and Angles is read
+3	5
+%
+%Names of Organs, Index (an autoIncr integer number), VoxelInit (default 0), VoxelEnd(default 0), totalDose, ActualMinDose, actualMaxDose, DoseUB, DoseLB, a, v (for Wu et al. formula), totalVoxels, isTarget (boolean). For CERR example, we use PTVHD, Rectum and Bladder. For TRT001 we use LECHOPROST, RECTO and VEJIGA.
+LECHOPROST	0	0	0	0	0	0	80	70	70	-10	12	0	true
+RECTO	1	0	0	0	0	0	65	0	55	8	8	0	false
+VEJIGA	2	0	0	0	0	0	65	0	50	2	5	0	false
+%
+%PathFile, the path to the case data files
+%/home/juan/CERR_Prostate/
+%../../../NetBeansProjects/CERR_Prostate/
+../TRT001/
+%
+%Option, objectiveFuntion to be used. 1 means logFunction, 2 Lexico Rectum, 3 Lexico Bladder, 4 Inverse Function
+1
+%
+%Selection Criterion: 1 = 'TS' , 2 = 'TSPL'
+1
+%
+%Step size
+5
+%
+%iterations, number of sequential LS. Default is 1. In case no enough computational resources are available, 'iterations' can be bigger so local optima would be generated sequentially. This would take longer though.
+5
+%
+%Iterations Limit for TS.
+40
+%
+%Penalizacion.
+6
+%
+%No best iterations limit.
+5
+%
+%Neighbourhood Size.
+10
+%
+%Estructura a utilizar para PerformanceList: 1 = Arreglo, 2 = Matriz, 0 = metodoAntiguo. (TS -> 0 ; TSPL -> 1 or 2)
+0
+%
+%Cantidad de iteraciones recolectando informacion.
+0
+%
+%Tipo de tabuList a ocupar: 1 = Arreglo, 2 = Matriz, 0 = no usar tabuList.
+1
+%
+%Busqueda Restringida: true = ocupar busqueda restringida, false = no ocupar busqueda restringida
+true
+%
+%Si escogio busqueda restringida escoja por cuantos steps sera el ancho del cono
+1
+%
+%output ipopt
+false
+% 
+%Solver
+ipopt
+%
+%Paralell neighbour generation. ONLY FOR NESI. Default value is false. It speeds up the optimisation process but it needs more cores and more available memory. In case Next Descent Algorithms are used, this parameter MUST be set 'false'
+true
+%
+%Vx Index per organ. First column corresponds to organ index. Only one row per organ (usually only for target regions)
+0	95	100	113
+%
+%Dx Index per organ. First column corresponds to organ index. Only one row per organ (usually only for OAR regions)
+1	50	30	5
+2	50	30	5
+%
+%Initial BAC. It must be a list of BACs, equal to the number of initial BACs times the number of iterations. If random BACs are desired write "none"
+%none
+%5	85	115
+%5	85	115	250	335
+%
+0	70	140	210	280
+0	70	140	210	280
+0	70	140	210	280
+0	70	140	210	280
+0	70	140	210	280
+%5	75	145	215	285
+%10	80	150	220	290
+%15	85	155	225	295
+%20	90	160	230	300
+%25	95	165	235	305
+%30	100	170	240	310
+%35	105	175	245	315
+%40	110	180	250	320
+%45	115	185	255	325
+%50	120	190	260	330
+%55	125	195	265	335
+%60	130	200	270	340
+%65	135	205	275	345
+%55	95	205	250	305
+%50	135	175	240	335
+%60	80	200	255	335
+%40	115	190	230	355
+%35	135	165	250	305
+%70	120	150	240	350
+%70	100	155	290	310
+%60	100	150	220	335
+%20	140	190	240	305
+%60	80	185	250	330
+%25	125	155	255	300
+%35	130	175	275	300
+%60	115	175	245	345
+%35	145	170	280	320
+%35	105	165	235	320
+%5	105	185	230	310
+%60	110	210	255	335
+%60	140	155	255	355
+%15	100	160	240	335
+%45	145	210	220	325
+%5	40	230	275	340
+%95	210	245	270	340
+%30	120	130	170	345
+%80	155	265	270	335
+%20	125	185	220	305
+%10	45	125	155	305
+%80	140	205	245	330
+%20	105	155	245	290
+%155	210	275	315	325
+%135	175	210	275	355
+%80	115	130	320	345
+%0	30	225	245	330
+%215	230	245	285	310
+%55	105	185	225	350
+%0	15	40	215	275
+%Si desea comparar con datos de otra heurística para cada bac true, si no desea comparar false.
+%false
+%
+%Si ecogió comparar por favor ingresar Tiempo total de ejecucion, evaluaciones totales y BestFitness de la heurística para cada BAC a comparar en ese orden. 
+5153	81	0.7233698031218401
+5153	81	0.7233698031218401
+5153	81	0.7233698031218401
+5153	81	0.7233698031218401
+5153	81	0.7233698031218401
+%4588	70	0.7233698031
+%4963	81	0.7234018005
+%4560	71	0.72485332
+%3272	50	0.7255120444
+%5878	91	0.7189553939
+%7920	130	0.7180297903
+%9631	157	0.717968732
+%9337	156	0.7181052621
+%4910	81	0.7334998734
+%8159	141	0.7131157138
+%7150	120	0.7135557238
+%6053	100	0.7145059926
+%4616	80	0.7152036617
+%
